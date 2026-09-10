@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#111111">
+
+  <title>Taqueria 5 de Mayo | Belton MO</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      background: #111111;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*
+      IMAGEN COMPLETA
+    */
+
+    .poster {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .poster-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /*
+      BOTONES INVISIBLES
+      COLOCADOS SOBRE LOS
+      BOTONES DE LA IMAGEN
+    */
+
+    .hotspot {
+      position: absolute;
+
+      left: 11.5%;
+      width: 80%;
+
+      display: block;
+
+      z-index: 20;
+
+      border-radius: 22px;
+
+      cursor: pointer;
+
+      -webkit-tap-highlight-color:
+        rgba(255,255,255,0.18);
+    }
+
+    /*
+      EFECTO AL TOCAR
+    */
+
+    .hotspot:active {
+      background:
+        rgba(255,255,255,0.10);
+    }
+
+
+    /*
+      🟢 CALL NOW
+    */
+
+    .call {
+      top: 30.9%;
+      height: 8.4%;
+    }
+
+
+    /*
+      🔴 ORDER BY PHONE
+    */
+
+    .phone-order {
+      top: 40.0%;
+      height: 8.4%;
+    }
+
+
+    /*
+      🔴 DOORDASH
+    */
+
+    .doordash {
+      top: 49.2%;
+      height: 8.4%;
+    }
+
+
+    /*
+      🟠 GRUBHUB
+    */
+
+    .grubhub {
+      top: 58.3%;
+      height: 8.4%;
+    }
+
+
+    /*
+      🟢 UBER EATS
+    */
+
+    .ubereats {
+      top: 67.5%;
+      height: 8.4%;
+    }
+
+
+    /*
+      🔵 DIRECTIONS
+    */
+
+    .directions {
+      top: 76.7%;
+      height: 8.4%;
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <main class="poster">
+
+
+    <!-- IMAGEN PRINCIPAL -->
+
+    <img
+      src="logo.png"
+      class="poster-image"
+      alt="Cinco de Mayo Taqueria y Carniceria"
+    >
+
+
+
+    <!-- ================================= -->
+    <!-- 🟢 CALL NOW / LLAMAR AHORA -->
+    <!-- ================================= -->
+
+    <a
+      class="hotspot call"
+
+      href="tel:+18163315677"
+
+      aria-label="Call Cinco de Mayo"
+    ></a>
+
+
+
+    <!-- ================================= -->
+    <!-- 🔴 ORDER BY PHONE -->
+    <!-- ================================= -->
+
+    <a
+      class="hotspot phone-order"
+
+      href="tel:+18163315677"
+
+      aria-label="Order by phone"
+    ></a>
+
+
+
+    <!-- ================================= -->
+    <!-- 🔴 ORDER ON DOORDASH -->
+    <!-- ================================= -->
+
+    <a
+      class="hotspot doordash"
+
+      href="https://www.doordash.com/store/cinco-de-mayo-taqueria-y-carnecer%C3%ADa-belton-42180105/"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      aria-label="Order on DoorDash"
+    ></a>
+
+
+
+    <!-- ================================= -->
+    <!-- 🟠 ORDER ON GRUBHUB -->
+    <!-- ================================= -->
+
+    <a
+      class="hotspot grubhub"
+
+      href="https://www.grubhub.com/restaurant/cinco-de-mayo-taqueria-y-carniceria-524-n-scott-ave-belton/6594592"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      aria-label="Order on Grubhub"
+    ></a>
+
+
+
+    <!-- ================================= -->
+    <!-- 🟢 ORDER ON UBER EATS -->
+    <!-- ================================= -->
+
+    <a
+      class="hotspot ubereats"
+
+      href="https://www.ubereats.com/store/cinco-de-mayo-carniceria-y-taqueria-524-north-scott-avenue/bpSWOgCEWEG0LLGL1NzELA?srsltid=AfmBOooNwQM4swJh9qTuukUEmIBsmbpg_uUt3Ryv9L4ZWiOpW0xGgHtA"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      aria-label="Order on Uber Eats"
+    ></a>
+
+
+
+    <!-- ================================= -->
+    <!-- 🔵 DIRECTIONS / COMO LLEGAR -->
+    <!-- ================================= -->
+
+    <a
+      class="hotspot directions"
+
+      href="https://www.google.com/maps/search/?api=1&query=524+N+Scott+Ave+Belton+MO+64012"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      aria-label="Directions to Cinco de Mayo"
+    ></a>
+
+
+  </main>
+
+</body>
+</html>
