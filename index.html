@@ -1,265 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<title>Cinco de Mayo Taquería y Carnicería</title>
 
-  <meta name="theme-color" content="#111111">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <title>Taqueria 5 de Mayo | Belton MO</title>
+html {
+  scroll-behavior: smooth;
+}
 
-  <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, #35200c 0%, #15100a 35%, #090909 75%);
+  color: white;
+  min-height: 100vh;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+.container {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 22px 18px 40px;
+  text-align: center;
+}
 
-    html,
-    body {
-      width: 100%;
-      min-height: 100%;
-      background: #111111;
-    }
+/* LOGO */
+.logo {
+  width: 100%;
+  max-width: 470px;
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;
+}
 
-    body {
-      display: flex;
-      justify-content: center;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+.subtitle {
+  color: #e8b84a;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 4px 0 25px;
+  font-weight: bold;
+}
 
-    /*
-      IMAGEN COMPLETA
-    */
+/* BUTTONS */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
 
-    .poster {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+.btn {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 10px 18px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  background: linear-gradient(135deg, #292929, #111);
+  border: 1px solid #b87918;
+  box-shadow:
+    0 5px 14px rgba(0,0,0,.45),
+    inset 0 0 10px rgba(255,170,30,.07);
+  transition: .2s;
+}
 
-    .poster-image {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+.btn:active {
+  transform: scale(.98);
+}
 
-    /*
-      BOTONES INVISIBLES
-      COLOCADOS SOBRE LOS
-      BOTONES DE LA IMAGEN
-    */
+.icon {
+  width: 42px;
+  font-size: 27px;
+  flex-shrink: 0;
+  text-align: center;
+  margin-right: 12px;
+}
 
-    .hotspot {
-      position: absolute;
+.btn-text {
+  flex: 1;
+  text-align: left;
+}
 
-      left: 11.5%;
-      width: 80%;
+.btn-text strong {
+  display: block;
+  font-size: 16px;
+}
 
-      display: block;
+.btn-text small {
+  display: block;
+  color: #cfcfcf;
+  font-size: 12px;
+  margin-top: 3px;
+  font-weight: normal;
+}
 
-      z-index: 20;
+/* SPECIAL MENU BUTTON */
+.menu-btn {
+  background: linear-gradient(135deg, #8f180f, #4b0905);
+  border: 1px solid #e4a82c;
+}
 
-      border-radius: 22px;
+/* MENU */
+#menu {
+  display: none;
+  margin-top: 30px;
+  padding-top: 10px;
+}
 
-      cursor: pointer;
+#menu:target {
+  display: block;
+}
 
-      -webkit-tap-highlight-color:
-        rgba(255,255,255,0.18);
-    }
+.menu-title {
+  color: #f0b735;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
 
-    /*
-      EFECTO AL TOCAR
-    */
+.menu-subtitle {
+  color: #ddd;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
 
-    .hotspot:active {
-      background:
-        rgba(255,255,255,0.10);
-    }
+.menu-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 22px;
+  border-radius: 12px;
+  border: 1px solid #8f5b15;
+  box-shadow: 0 7px 22px rgba(0,0,0,.55);
+}
 
+.close-menu {
+  display: inline-block;
+  color: #f0b735;
+  text-decoration: none;
+  border: 1px solid #9e6a1d;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-top: 4px;
+}
 
-    /*
-      🟢 CALL NOW
-    */
+/* ADDRESS */
+.address {
+  margin-top: 28px;
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+}
 
-    .call {
-      top: 30.9%;
-      height: 8.4%;
-    }
-
-
-    /*
-      🔴 ORDER BY PHONE
-    */
-
-    .phone-order {
-      top: 40.0%;
-      height: 8.4%;
-    }
-
-
-    /*
-      🔴 DOORDASH
-    */
-
-    .doordash {
-      top: 49.2%;
-      height: 8.4%;
-    }
-
-
-    /*
-      🟠 GRUBHUB
-    */
-
-    .grubhub {
-      top: 58.3%;
-      height: 8.4%;
-    }
-
-
-    /*
-      🟢 UBER EATS
-    */
-
-    .ubereats {
-      top: 67.5%;
-      height: 8.4%;
-    }
-
-
-    /*
-      🔵 DIRECTIONS
-    */
-
-    .directions {
-      top: 76.7%;
-      height: 8.4%;
-    }
-
-  </style>
+.footer {
+  margin-top: 25px;
+  color: #777;
+  font-size: 11px;
+}
+</style>
 </head>
-
 
 <body>
 
-  <main class="poster">
+<div class="container" id="top">
 
+  <img
+    src="logo.png"
+    alt="Cinco de Mayo Taquería y Carnicería"
+    class="logo"
+  >
 
-    <!-- IMAGEN PRINCIPAL -->
+  <div class="subtitle">
+    AUTHENTIC MEXICAN FOOD
+  </div>
+
+  <div class="buttons">
+
+    <!-- MENU -->
+    <a href="#menu" class="btn menu-btn">
+      <span class="icon">🌮</span>
+      <span class="btn-text">
+        <strong>VIEW MENU</strong>
+        <small>VER MENÚ</small>
+      </span>
+    </a>
+
+    <!-- CALL -->
+    <a href="tel:+18163315677" class="btn">
+      <span class="icon">📞</span>
+      <span class="btn-text">
+        <strong>CALL NOW</strong>
+        <small>LLAMAR AHORA · (816) 331-5677</small>
+      </span>
+    </a>
+
+    <!-- ORDER BY PHONE -->
+    <a href="tel:+18163315677" class="btn">
+      <span class="icon">📱</span>
+      <span class="btn-text">
+        <strong>ORDER BY PHONE</strong>
+        <small>ORDENAR POR TELÉFONO</small>
+      </span>
+    </a>
+
+    <!-- DOORDASH -->
+    <a
+      href="https://www.doordash.com/store/cinco-de-mayo-taqueria-y-carnecer%C3%ADa-belton-42180105/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn"
+    >
+      <span class="icon">🔴</span>
+      <span class="btn-text">
+        <strong>DOORDASH</strong>
+        <small>ORDER ONLINE · ORDENAR EN LÍNEA</small>
+      </span>
+    </a>
+
+    <!-- GRUBHUB -->
+    <a
+      href="https://www.grubhub.com/restaurant/cinco-de-mayo-taqueria-y-carniceria-524-n-scott-ave-belton/6594592"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn"
+    >
+      <span class="icon">🟠</span>
+      <span class="btn-text">
+        <strong>GRUBHUB</strong>
+        <small>ORDER ONLINE · ORDENAR EN LÍNEA</small>
+      </span>
+    </a>
+
+    <!-- UBER EATS -->
+    <a
+      href="https://www.ubereats.com/store/cinco-de-mayo-carniceria-y-taqueria-524-north-scott-avenue/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn"
+    >
+      <span class="icon">🟢</span>
+      <span class="btn-text">
+        <strong>UBER EATS</strong>
+        <small>ORDER ONLINE · ORDENAR EN LÍNEA</small>
+      </span>
+    </a>
+
+    <!-- DIRECTIONS -->
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=524+N+Scott+Ave+Belton+MO+64012"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn"
+    >
+      <span class="icon">📍</span>
+      <span class="btn-text">
+        <strong>DIRECTIONS</strong>
+        <small>CÓMO LLEGAR</small>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- DIGITAL MENU -->
+  <section id="menu">
+
+    <h2 class="menu-title">OUR MENU</h2>
+    <div class="menu-subtitle">NUESTRO MENÚ</div>
 
     <img
-      src="logo.png"
-      class="poster-image"
-      alt="Cinco de Mayo Taqueria y Carniceria"
+      src="menu1.png"
+      alt="Cinco de Mayo Menu Page 1"
+      class="menu-image"
     >
 
+    <img
+      src="menu2.png"
+      alt="Cinco de Mayo Menu Page 2"
+      class="menu-image"
+    >
 
+    <a href="#top" class="close-menu">
+      ↑ BACK TO TOP / REGRESAR
+    </a>
 
-    <!-- ================================= -->
-    <!-- 🟢 CALL NOW / LLAMAR AHORA -->
-    <!-- ================================= -->
+  </section>
 
-    <a
-      class="hotspot call"
+  <div class="address">
+    <strong>CINCO DE MAYO TAQUERÍA Y CARNICERÍA</strong><br>
+    524 N Scott Ave<br>
+    Belton, MO 64012<br>
+    (816) 331-5677
+  </div>
 
-      href="tel:+18163315677"
+  <div class="footer">
+    Authentic Mexican Food
+  </div>
 
-      aria-label="Call Cinco de Mayo"
-    ></a>
-
-
-
-    <!-- ================================= -->
-    <!-- 🔴 ORDER BY PHONE -->
-    <!-- ================================= -->
-
-    <a
-      class="hotspot phone-order"
-
-      href="tel:+18163315677"
-
-      aria-label="Order by phone"
-    ></a>
-
-
-
-    <!-- ================================= -->
-    <!-- 🔴 ORDER ON DOORDASH -->
-    <!-- ================================= -->
-
-    <a
-      class="hotspot doordash"
-
-      href="https://www.doordash.com/store/cinco-de-mayo-taqueria-y-carnecer%C3%ADa-belton-42180105/"
-
-      target="_blank"
-
-      rel="noopener noreferrer"
-
-      aria-label="Order on DoorDash"
-    ></a>
-
-
-
-    <!-- ================================= -->
-    <!-- 🟠 ORDER ON GRUBHUB -->
-    <!-- ================================= -->
-
-    <a
-      class="hotspot grubhub"
-
-      href="https://www.grubhub.com/restaurant/cinco-de-mayo-taqueria-y-carniceria-524-n-scott-ave-belton/6594592"
-
-      target="_blank"
-
-      rel="noopener noreferrer"
-
-      aria-label="Order on Grubhub"
-    ></a>
-
-
-
-    <!-- ================================= -->
-    <!-- 🟢 ORDER ON UBER EATS -->
-    <!-- ================================= -->
-
-    <a
-      class="hotspot ubereats"
-
-      href="https://www.ubereats.com/store/cinco-de-mayo-carniceria-y-taqueria-524-north-scott-avenue/bpSWOgCEWEG0LLGL1NzELA?srsltid=AfmBOooNwQM4swJh9qTuukUEmIBsmbpg_uUt3Ryv9L4ZWiOpW0xGgHtA"
-
-      target="_blank"
-
-      rel="noopener noreferrer"
-
-      aria-label="Order on Uber Eats"
-    ></a>
-
-
-
-    <!-- ================================= -->
-    <!-- 🔵 DIRECTIONS / COMO LLEGAR -->
-    <!-- ================================= -->
-
-    <a
-      class="hotspot directions"
-
-      href="https://www.google.com/maps/search/?api=1&query=524+N+Scott+Ave+Belton+MO+64012"
-
-      target="_blank"
-
-      rel="noopener noreferrer"
-
-      aria-label="Directions to Cinco de Mayo"
-    ></a>
-
-
-  </main>
+</div>
 
 </body>
 </html>
