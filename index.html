@@ -104,9 +104,15 @@ body {
   font-weight: normal;
 }
 
-/* SPECIAL MENU BUTTON */
+/* MENU BUTTON */
 .menu-btn {
   background: linear-gradient(135deg, #8f180f, #4b0905);
+  border: 1px solid #e4a82c;
+}
+
+/* SAVE CONTACT BUTTON */
+.contact-btn {
+  background: linear-gradient(135deg, #3a2910, #17120b);
   border: 1px solid #e4a82c;
 }
 
@@ -185,12 +191,21 @@ body {
 
   <div class="buttons">
 
-    <!-- MENU -->
+    <!-- VIEW MENU -->
     <a href="#menu" class="btn menu-btn">
       <span class="icon">🌮</span>
       <span class="btn-text">
         <strong>VIEW MENU</strong>
         <small>VER MENÚ</small>
+      </span>
+    </a>
+
+    <!-- SAVE CONTACT -->
+    <a href="cinco-de-mayo.vcf" class="btn contact-btn" download>
+      <span class="icon">👤</span>
+      <span class="btn-text">
+        <strong>SAVE CONTACT</strong>
+        <small>GUARDAR CONTACTO</small>
       </span>
     </a>
 
